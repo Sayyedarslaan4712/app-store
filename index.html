@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My App Store</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>My App Store</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#upload">Upload App</a></li>
+                <li><a href="#apps">View Apps</a></li>
+                <li><a href="#login">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home">
+        <h2>Welcome to App Store by sayyed Arslaan</h2>
+        <p>Your one-stop platform for uploading and downloading apps!</p>
+    </section>
+
+    <!-- App Upload Section -->
+    <section id="upload">
+        <h2>Upload Your App</h2>
+        <form id="uploadForm" enctype="multipart/form-data">
+            <label for="appName">App Name:</label>
+            <input type="text" id="appName" name="appName" required><br>
+
+            <label for="appFile">Upload App File (.apk/.zip):</label>
+            <input type="file" id="appFile" name="appFile" accept=".apk,.zip" required><br>
+
+            <button type="submit">Upload App</button>
+        </form>
+        <div id="uploadStatus"></div>
+    </section>
+
+    <!-- App List Section -->
+    <section id="apps">
+        <h2>Available Apps</h2>
+        <ul id="appList">
+            <!-- Uploaded apps will appear here -->
+        </ul>
+    </section>
+
+    <!-- Login Section -->
+    <section id="login">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required><br>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required><br>
+
+            <button type="submit">Login</button>
+        </form>
+        <div id="loginStatus"></div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 My App Store by Sayyed Arslaan. All rights reserved.</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
